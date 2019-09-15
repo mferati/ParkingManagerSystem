@@ -46,14 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +84,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ParkingManagerSystem.BLL\ParkingManagerSystem.BLL.csproj">
+      <Project>{47446cd2-0df3-43b9-8fe3-e438808ae056}</Project>
+      <Name>ParkingManagerSystem.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingManagerSystem.BO\ParkingManagerSystem.BO.csproj">
+      <Project>{2aac5fa8-7212-45a3-9434-6b118d78b6a4}</Project>
+      <Name>ParkingManagerSystem.BO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
